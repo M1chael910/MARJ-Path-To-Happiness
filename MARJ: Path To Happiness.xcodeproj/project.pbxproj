@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76F67C3D208A4E1F00E329B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F67C3C208A4E1F00E329B2 /* AppDelegate.swift */; };
+		76F67C3F208A4E1F00E329B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F67C3E208A4E1F00E329B2 /* ViewController.swift */; };
+		76F67C42208A4E1F00E329B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F67C40208A4E1F00E329B2 /* Main.storyboard */; };
+		76F67C45208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F67C43208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld */; };
+		76F67C47208A4E1F00E329B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F67C46208A4E1F00E329B2 /* Assets.xcassets */; };
+		76F67C4A208A4E1F00E329B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76F67C39208A4E1F00E329B2 /* MARJ: Path To Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MARJ: Path To Happiness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76F67C3C208A4E1F00E329B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76F67C3E208A4E1F00E329B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F67C41208A4E1F00E329B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76F67C44208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MARJ__Path_To_Happiness.xcdatamodel; sourceTree = "<group>"; };
+		76F67C46208A4E1F00E329B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76F67C49208A4E1F00E329B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76F67C4B208A4E1F00E329B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76F67C36208A4E1F00E329B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76F67C30208A4E1F00E329B2 = {
+			isa = PBXGroup;
+			children = (
+				76F67C3B208A4E1F00E329B2 /* MARJ: Path To Happiness */,
+				76F67C3A208A4E1F00E329B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76F67C3A208A4E1F00E329B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76F67C39208A4E1F00E329B2 /* MARJ: Path To Happiness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76F67C3B208A4E1F00E329B2 /* MARJ: Path To Happiness */ = {
+			isa = PBXGroup;
+			children = (
+				76F67C3C208A4E1F00E329B2 /* AppDelegate.swift */,
+				76F67C3E208A4E1F00E329B2 /* ViewController.swift */,
+				76F67C40208A4E1F00E329B2 /* Main.storyboard */,
+				76F67C46208A4E1F00E329B2 /* Assets.xcassets */,
+				76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */,
+				76F67C4B208A4E1F00E329B2 /* Info.plist */,
+				76F67C43208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld */,
+			);
+			path = "MARJ: Path To Happiness";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76F67C38208A4E1F00E329B2 /* MARJ: Path To Happiness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76F67C4E208A4E1F00E329B2 /* Build configuration list for PBXNativeTarget "MARJ: Path To Happiness" */;
+			buildPhases = (
+				76F67C35208A4E1F00E329B2 /* Sources */,
+				76F67C36208A4E1F00E329B2 /* Frameworks */,
+				76F67C37208A4E1F00E329B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MARJ: Path To Happiness";
+			productName = "MARJ: Path To Happiness";
+			productReference = 76F67C39208A4E1F00E329B2 /* MARJ: Path To Happiness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76F67C31208A4E1F00E329B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "John Hersey High School";
+				TargetAttributes = {
+					76F67C38208A4E1F00E329B2 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 76F67C34208A4E1F00E329B2 /* Build configuration list for PBXProject "MARJ: Path To Happiness" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76F67C30208A4E1F00E329B2;
+			productRefGroup = 76F67C3A208A4E1F00E329B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76F67C38208A4E1F00E329B2 /* MARJ: Path To Happiness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76F67C37208A4E1F00E329B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76F67C4A208A4E1F00E329B2 /* LaunchScreen.storyboard in Resources */,
+				76F67C47208A4E1F00E329B2 /* Assets.xcassets in Resources */,
+				76F67C42208A4E1F00E329B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76F67C35208A4E1F00E329B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76F67C45208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld in Sources */,
+				76F67C3F208A4E1F00E329B2 /* ViewController.swift in Sources */,
+				76F67C3D208A4E1F00E329B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76F67C40208A4E1F00E329B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76F67C41208A4E1F00E329B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76F67C49208A4E1F00E329B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76F67C4C208A4E1F00E329B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76F67C4D208A4E1F00E329B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76F67C4F208A4E1F00E329B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46LMRFK8CD;
+				INFOPLIST_FILE = "MARJ: Path To Happiness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.620263.MARJ--Path-To-Happiness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76F67C50208A4E1F00E329B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46LMRFK8CD;
+				INFOPLIST_FILE = "MARJ: Path To Happiness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.620263.MARJ--Path-To-Happiness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76F67C34208A4E1F00E329B2 /* Build configuration list for PBXProject "MARJ: Path To Happiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76F67C4C208A4E1F00E329B2 /* Debug */,
+				76F67C4D208A4E1F00E329B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76F67C4E208A4E1F00E329B2 /* Build configuration list for PBXNativeTarget "MARJ: Path To Happiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76F67C4F208A4E1F00E329B2 /* Debug */,
+				76F67C50208A4E1F00E329B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76F67C43208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76F67C44208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodel */,
+			);
+			currentVersion = 76F67C44208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodel */;
+			path = MARJ__Path_To_Happiness.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 76F67C31208A4E1F00E329B2 /* Project object */;
+}
