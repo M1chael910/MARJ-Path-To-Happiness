@@ -9,15 +9,30 @@
 import Foundation
 
 
-enum moodType {
-    case happy
-    case sad
-    case stressed
-    case Anxious
+enum positiveMood {
+    case Excited
+    case optimistic
+    case calm
+    case confident
+    
 }
 
 
-class Mood {
-    var mood: [moodType]
-    var description: String
+enum negativeMood {
+    case depressed
+    case heartBroken
+    case upset
+    case pesamistic
+    case lonely
+    case anxious
+    case tired
+}
+
+
+
+
+struct Mood {
+    var happyMoods: [positiveMood]?
+    var negativeMoods: [negativeMood]?
+    
 }
