@@ -25,6 +25,10 @@ class MainMoodTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
