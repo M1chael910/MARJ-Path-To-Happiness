@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsb-3R-I5Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,12 +34,47 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="g81-7H-lTN">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="3ns-st-J70"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Lu-0V-6TP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Lu-0V-6TP">
+                            <connections>
+                                <segue destination="A0d-7d-xdA" kind="presentation" id="wSw-gJ-yfP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="A0d-7d-xdA" kind="presentation" id="bs2-PD-pmL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0k-KB-Qbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="66"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Zob-D6-eel">
+            <objects>
+                <tableViewController id="A0d-7d-xdA" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="geK-DV-lQs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Baf-0P-MUV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Baf-0P-MUV" id="M1L-dW-za4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A0d-7d-xdA" id="f1e-7I-lmC"/>
+                            <outlet property="delegate" destination="A0d-7d-xdA" id="3Yb-XW-j72"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0L-nr-gyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="65"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MTi-Gx-z0Z">
@@ -60,4 +95,7 @@
             <point key="canvasLocation" x="45.600000000000001" y="66.11694152923539"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bs2-PD-pmL"/>
+    </inferredMetricsTieBreakers>
 </document>
