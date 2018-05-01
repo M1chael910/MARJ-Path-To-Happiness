@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="012714-path-to-happiness" translatesAutoresizingMaskIntoConstraints="NO" id="hHW-YH-Mwk">
-                                <rect key="frame" x="0.0" y="101" width="375" height="451"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="path of least resistance" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-hI-z11">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="012714-path-to-happiness" width="225" height="260"/>
+        <image name="path of least resistance" width="1621" height="1080"/>
     </resources>
 </document>
