@@ -18,13 +18,12 @@ enum positiveMood {
     case happy
     case relaxed
     case Peaceful
-    
 }
 
 
 enum negativeMood {
     case Depressed
-    case BeartBroken
+    case HeartBroken
     case Upset
     case Pesamistic
     case Lonely
