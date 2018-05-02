@@ -18,13 +18,12 @@ enum positiveMood {
     case happy
     case relaxed
     case Peaceful
-    
 }
 
 
 enum negativeMood {
     case Depressed
-    case BeartBroken
+    case HeartBroken
     case Upset
     case Pesamistic
     case Lonely
@@ -37,8 +36,8 @@ enum negativeMood {
 
 
 struct Mood {
-    var happyMoods: [positiveMood]?
-    var negativeMoods: [negativeMood]?
+    var PositiveMoods: [positiveMood : Bool]?
+    var negativeMoods: [negativeMood : Bool]?
     var description: String
     var date: Date
 }

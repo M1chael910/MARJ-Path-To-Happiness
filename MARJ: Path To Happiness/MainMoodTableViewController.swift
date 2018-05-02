@@ -12,8 +12,6 @@ class MainMoodTableViewController: UITableViewController {
 
     var moods: [Mood]!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,20 +46,17 @@ class MainMoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
-
-        // Configure the cell...
-
+       
         return cell
     }
  
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
     /*
     // Override to support editing the table view.
