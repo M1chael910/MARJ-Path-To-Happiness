@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760F5648209A215D00160A3E /* MainMoodCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760F5647209A215D00160A3E /* MainMoodCreatorView.swift */; };
 		76606685208F9239003CA2E0 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76606684208F9239003CA2E0 /* Mood.swift */; };
 		76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */; };
 		76B4B60F209776D50080F2B8 /* mainMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4B60E209776D50080F2B8 /* mainMoodCell.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760F5647209A215D00160A3E /* MainMoodCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoodCreatorView.swift; sourceTree = "<group>"; };
 		76606684208F9239003CA2E0 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoodTableViewController.swift; sourceTree = "<group>"; };
 		76B4B60E209776D50080F2B8 /* mainMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMoodCell.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				76B4B60E209776D50080F2B8 /* mainMoodCell.swift */,
 				76606684208F9239003CA2E0 /* Mood.swift */,
 				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
+				760F5647209A215D00160A3E /* MainMoodCreatorView.swift */,
 				76F67C40208A4E1F00E329B2 /* Main.storyboard */,
 				76F67C46208A4E1F00E329B2 /* Assets.xcassets */,
 				76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				76606685208F9239003CA2E0 /* Mood.swift in Sources */,
 				76F67C45208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld in Sources */,
 				76B4B60F209776D50080F2B8 /* mainMoodCell.swift in Sources */,
+				760F5648209A215D00160A3E /* MainMoodCreatorView.swift in Sources */,
 				76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */,
 				76F67C3D208A4E1F00E329B2 /* AppDelegate.swift in Sources */,
 			);
