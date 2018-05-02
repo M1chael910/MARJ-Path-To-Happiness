@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="850" y="66"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Mood Creator Table View Controller-->
         <scene sceneID="Zob-D6-eel">
             <objects>
-                <tableViewController id="A0d-7d-xdA" sceneMemberID="viewController">
+                <tableViewController id="A0d-7d-xdA" customClass="MoodCreatorTableViewController" customModule="MARJ__Path_To_Happiness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="geK-DV-lQs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
