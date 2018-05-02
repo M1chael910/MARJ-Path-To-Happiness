@@ -36,8 +36,8 @@ enum negativeMood {
 
 
 struct Mood {
-    var happyMoods: [positiveMood]?
-    var negativeMoods: [negativeMood]?
+    var PositiveMoods: [positiveMood : Bool]?
+    var negativeMoods: [negativeMood : Bool]?
     var description: String
     var date: Date
 }
