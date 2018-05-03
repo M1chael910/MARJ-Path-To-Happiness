@@ -65,6 +65,7 @@
 				76F67C3C208A4E1F00E329B2 /* AppDelegate.swift */,
 				76B4B60E209776D50080F2B8 /* mainMoodCell.swift */,
 				76606684208F9239003CA2E0 /* Mood.swift */,
+				40EB78E2209A26D7005FF342 /* MoodCreatorTableViewController.swift */,
 				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
 				760F5647209A215D00160A3E /* MainMoodCreatorView.swift */,
 				76F67C40208A4E1F00E329B2 /* Main.storyboard */,
@@ -154,6 +155,7 @@
 				760F5648209A215D00160A3E /* MainMoodCreatorView.swift in Sources */,
 				76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */,
 				76F67C3D208A4E1F00E329B2 /* AppDelegate.swift in Sources */,
+				40EB78E3209A26D7005FF342 /* MoodCreatorTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
