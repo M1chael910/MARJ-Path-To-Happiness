@@ -40,4 +40,6 @@ struct Mood {
     var negativeMoods: [negativeMood : Bool]?
     var description: String
     var date: Date
+    
+    
 }
