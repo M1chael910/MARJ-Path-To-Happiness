@@ -10,9 +10,11 @@ import UIKit
 
 class MoodCreatorViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height)
         // Do any additional setup after loading the view.
     }
 
