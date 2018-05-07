@@ -11,11 +11,14 @@ import UIKit
 class MoodCreatorViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height)
-        // Do any additional setup after loading the view.
+    
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
+        scrollView.isScrollEnabled = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +27,7 @@ class MoodCreatorViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -32,6 +35,6 @@ class MoodCreatorViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }
