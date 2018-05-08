@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoodCreatorViewController: UIViewController {
+class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
    
@@ -16,8 +16,10 @@ class MoodCreatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 2000)
         scrollView.isScrollEnabled = true
+        scrollView.bounces = false
+        
         
     }
 
