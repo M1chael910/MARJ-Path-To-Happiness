@@ -10,14 +10,12 @@ import UIKit
 
 class NegativeMoodTableView: UITableViewController {
     
-    
+    let negativeMoods = Mood.negativeMood
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    let negativeMoods = Mood.negativeMood
-        
-
-    }
+        tableView.delegate = self
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,26 +29,27 @@ class NegativeMoodTableView: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Mood.negativeMood.count
+        return negativeMoods.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NegativeMoods", for: indexPath)
-        for mood in Mood.negativeMood {
-        cell.detailTextLabel?.text = mood
+        
+        for mood in negativeMoods {
+            let mood = negativeMoods[indexPath.row]
+            cell.textLabel?.text = mood
         }
         return cell
     }
  
     
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
-    */
+ 
 
     /*
     // Override to support editing the table view.
