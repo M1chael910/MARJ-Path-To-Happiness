@@ -9,19 +9,37 @@
 import UIKit
 
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-   
+    @IBOutlet var positiveLabels: [UILabel]!
     
+    @IBOutlet var negativeLabels: [UILabel]!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var moodDescriptionTextField: UITextField!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 2000)
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
         scrollView.isScrollEnabled = true
         scrollView.bounces = false
-        
-        
     }
+    
+    
+    
+    
+    
+    @IBAction func positiveMoodButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "positiveSegue", sender: self)
+    }
+    
+    @IBAction func negativeMoodButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "negativeSegue", sender: self)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

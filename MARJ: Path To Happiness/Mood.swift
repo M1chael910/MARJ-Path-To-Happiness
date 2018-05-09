@@ -8,14 +8,6 @@
 
 import Foundation
 
-
-
-var positiveMood = ["Excited", "Optimistic", "Calm", "Confident", "Bold", "Happy", "Relaxed", "Peacefull"]
-var negativeMood = ["Depressed", "HeartBroken", "Upset", "Pesamistic", "Lonely", "Anxious", "Tired", "Guilty"]
-
-
-
-
 struct Mood {
     var PositiveMoods: [String : Bool]?
     var negativeMoods: [String : Bool]?
