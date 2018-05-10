@@ -43,6 +43,11 @@ class MainMoodTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
+    self.performSegue(withIdentifier: "mainToCreator", sender: self)
+    }
+    
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
         
     }

@@ -8,38 +8,14 @@
 
 import Foundation
 
-
-enum positiveMood {
-    case Excited
-    case optimistic
-    case calm
-    case confident
-    case Bold
-    case happy
-    case relaxed
-    case Peaceful
-}
-
-
-enum negativeMood {
-    case Depressed
-    case HeartBroken
-    case Upset
-    case Pesamistic
-    case Lonely
-    case Anxious
-    case Tired
-    case Guilty
-}
-
-
-
-
 struct Mood {
-    var PositiveMoods: [positiveMood : Bool]?
-    var negativeMoods: [negativeMood : Bool]?
+    var PositiveMoods: [String : Bool]?
+    var negativeMoods: [String : Bool]?
     var description: String
     var date: Date
+    
+    static var positiveMood = ["Excited", "Optimistic", "Calm", "Confident", "Bold", "Happy", "Relaxed", "Peacefull"]
+    static var negativeMood = ["Depressed", "HeartBroken", "Upset", "Pesamistic", "Lonely", "Anxious", "Tired", "Guilty"]
     
     
 }
