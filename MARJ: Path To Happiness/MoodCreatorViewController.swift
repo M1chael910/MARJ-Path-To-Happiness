@@ -23,9 +23,11 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         for label in positiveLabels {
             label.isEnabled = false
+            label.alpha = 0
         }
         for label in negativeLabels {
             label.isEnabled = false
+            label.alpha = 0
         }
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
