@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Mood {
-    var PositiveMoods: [String : Bool]?
-    var negativeMoods: [String : Bool]?
-    var description: String
-    var date: Date
+class Mood {
+    var PositiveMoods: [String : Bool] = ["Excited" : false, "Optimistic" : false, "Calm" : false, "Confident" : false, "Bold" : false, "Happy" : false, "Relaxed" : false, "Peaceful": false]
+    var negativeMoods: [String : Bool] = ["Depressed" : false, "Heartbroken": false , "Upset": false, "Pesamistic": false, "Lonely": false, "Anxious": false, "Tired": false, "Guilty": false]
+    var description: String?
+    var date: Date?
     
-    static var positiveMood = ["Excited", "Optimistic", "Calm", "Confident", "Bold", "Happy", "Relaxed", "Peacefull"]
-    static var negativeMood = ["Depressed", "HeartBroken", "Upset", "Pesamistic", "Lonely", "Anxious", "Tired", "Guilty"]
-    
-    
+    init?(description:String, date: Date) {
+        self.description = description
+        self.date = date
+    }
 }

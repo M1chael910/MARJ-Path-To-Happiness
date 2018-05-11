@@ -9,11 +9,13 @@
 import UIKit
 
 class NegativeMoodTableView: UITableViewController {
+    var currentMood: Mood!
     
-    let negativeMoods = Mood.negativeMood
+    var negativeMoods: [String : Bool]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        negativeMoods = currentMood.negativeMoods
         tableView.allowsSelection = true
         tableView.delegate = self
 }
@@ -37,32 +39,26 @@ class NegativeMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NegativeMoods", for: indexPath)
         
-        for mood in negativeMoods {
-            let mood = negativeMoods[indexPath.row]
+        for mood in negativeMoods.keys {
             cell.textLabel?.text = mood
         }
    
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        var tapIndex = 0
         if let Index = tableView.indexPathForSelectedRow {
-           
             if let currentCell = tableView.cellForRow(at: Index) {
-                print(currentCell)
+                if currentCell.accessoryType == .checkmark {
+                    currentCell.accessoryType = .none
+                }
+                currentCell.accessoryType = .checkmark
                 
-                    currentCell.accessoryType = .checkmark
-            
-            
             }
-    }
-    }
-    
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-     
-                
-                
         
+    }
+}
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
     }
     
