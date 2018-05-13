@@ -257,7 +257,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-k7-B7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uax-fI-UXH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3286" y="63"/>
+            <point key="canvasLocation" x="3225" y="63"/>
         </scene>
         <!--Positive Mood Table View-->
         <scene sceneID="7Tl-Je-FCH">

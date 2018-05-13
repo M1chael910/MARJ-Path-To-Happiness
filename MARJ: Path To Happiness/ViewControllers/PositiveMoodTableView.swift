@@ -9,8 +9,10 @@
 import UIKit
 
 class PositiveMoodTableView: UITableViewController {
+    
     var positiveMoods: [String : Bool]!
     var currentMood: Mood!
+    
     override func viewDidLoad() {
         positiveMoods = currentMood.PositiveMoods
         super.viewDidLoad()
@@ -83,13 +85,13 @@ class PositiveMoodTableView: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
-        return true
+        return false
     }
-    */
+ 
 
     /*
     // MARK: - Navigation

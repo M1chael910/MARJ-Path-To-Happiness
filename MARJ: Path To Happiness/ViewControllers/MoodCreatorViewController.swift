@@ -10,7 +10,7 @@ import UIKit
 
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
-    var myMood: Mood!
+    var myMood: [Mood]!
     
     
     @IBOutlet var positiveLabels: [UILabel]!
