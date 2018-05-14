@@ -64,10 +64,16 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "positiveSegue"{
-            let nvc = segue.destination as? PositiveMoodTableView
-            nvc?.positiveMoods = myMood.PositiveMoods
+            let positiveView = segue.destination as? PositiveMoodTableView
+            positiveView?.positiveMoods = myMood.PositiveMoods
         }
-    
+        
+        
+        if segue.identifier == "negativeSegue" {
+            let negativeView = segue.destination as? NegativeMoodTableView
+            negativeView?.negativeMoods = myMood.negativeMoods
+        }
+        
     }
  
 
