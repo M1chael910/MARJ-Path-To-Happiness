@@ -31,12 +31,14 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.isScrollEnabled = true
         for label in positiveLabels {
+            label.textAlignment = .center
             label.isEnabled = true
-            label.text = "hi"
+            label.text = ""
             label.alpha = 1
         }
         for label in negativeLabels {
-            label.text = "hi"
+            label.textAlignment = .center
+            label.text = ""
             label.isEnabled = true
             label.alpha = 1
         }
