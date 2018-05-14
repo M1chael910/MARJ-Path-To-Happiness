@@ -9,12 +9,14 @@
 import UIKit
 
 class NegativeMoodTableView: UITableViewController {
+    
     var currentMood: Mood!
     
     var negativeMoods: [String : Bool]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         negativeMoods = currentMood.negativeMoods
         tableView.allowsSelection = true
         tableView.delegate = self
@@ -45,6 +47,13 @@ class NegativeMoodTableView: UITableViewController {
    
         return cell
     }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var tapIndex = 0
         if let Index = tableView.indexPathForSelectedRow {

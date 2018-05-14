@@ -10,7 +10,10 @@ import UIKit
 
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
-    var myMood: [Mood]!
+    var myMoods: [Mood] =
+    
+    
+    var myMood: Mood!
     
     
     @IBOutlet var positiveLabels: [UILabel]!
@@ -26,19 +29,21 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        scrollView.isScrollEnabled = true
         for label in positiveLabels {
-            label.isEnabled = false
-            label.alpha = 0
+            label.isEnabled = true
+            label.text = "hi"
+            label.alpha = 1
         }
         for label in negativeLabels {
-//            label.isEnabled = false
-//            label.alpha = 0
+            label.text = "hi"
+            label.isEnabled = true
+            label.alpha = 1
         }
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
-        scrollView.isScrollEnabled = true
-        scrollView.bounces = false
+        
+        scrollView.bounces = true
         
     }
     
@@ -53,22 +58,16 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func negativeMoodButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "negativeSegue", sender: self)
     }
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "positiveSegue"{
+            let nvc = segue.destination as? PositiveMoodTableView
+            nvc?.positiveMoods = myMood.PositiveMoods
+        }
+    
     }
  
 
