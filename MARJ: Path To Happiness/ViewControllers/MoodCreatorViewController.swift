@@ -10,7 +10,7 @@ import UIKit
 
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
-    var myMoods: [Mood] =
+    var myMoods: [Mood]!
     
     
     var myMood: Mood!
