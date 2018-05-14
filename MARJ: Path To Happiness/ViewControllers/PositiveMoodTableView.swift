@@ -9,11 +9,12 @@
 import UIKit
 
 class PositiveMoodTableView: UITableViewController {
-
-    let positiveMoods = Mood.positiveMood
     
+    var positiveMoods: [String : Bool]!
+    var currentMood: Mood!
     
     override func viewDidLoad() {
+        positiveMoods = currentMood.PositiveMoods
         super.viewDidLoad()
         
         tableView.delegate = self
@@ -38,16 +39,21 @@ class PositiveMoodTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveMoods", for: indexPath)
-        cell.accessoryType = .checkmark
-        for mood in positiveMoods {
-            let mood = positiveMoods[indexPath.row]
+        
+        for mood in positiveMoods.keys {
             cell.textLabel?.text = mood
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveMoods", for: indexPath)
+        if let Index = tableView.indexPathForSelectedRow {
+            
+            if let currentCell = tableView.cellForRow(at: Index) {
+                currentCell.accessoryType = .checkmark
+            }
+        }
+
         
     }
  
@@ -79,13 +85,13 @@ class PositiveMoodTableView: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
-        return true
+        return false
     }
-    */
+ 
 
     /*
     // MARK: - Navigation

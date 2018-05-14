@@ -49,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7681E70520A5EFC700BC5AF0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76D1A349209B72AF00FC4AD2 /* MoodCreatorViewController.swift */,
+				76D1A345209B61FC00FC4AD2 /* NegativeMoodTableView.swift */,
+				76D1A347209B620A00FC4AD2 /* PositiveMoodTableView.swift */,
+				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		76F67C30208A4E1F00E329B2 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +79,10 @@
 		76F67C3B208A4E1F00E329B2 /* MARJ: Path To Happiness */ = {
 			isa = PBXGroup;
 			children = (
+				7681E70520A5EFC700BC5AF0 /* ViewControllers */,
 				76F67C3C208A4E1F00E329B2 /* AppDelegate.swift */,
 				76B4B60E209776D50080F2B8 /* mainMoodCell.swift */,
 				76606684208F9239003CA2E0 /* Mood.swift */,
-				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
-				76D1A345209B61FC00FC4AD2 /* NegativeMoodTableView.swift */,
-				76D1A349209B72AF00FC4AD2 /* MoodCreatorViewController.swift */,
-				76D1A347209B620A00FC4AD2 /* PositiveMoodTableView.swift */,
 				76F67C40208A4E1F00E329B2 /* Main.storyboard */,
 				76F67C46208A4E1F00E329B2 /* Assets.xcassets */,
 				76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */,
