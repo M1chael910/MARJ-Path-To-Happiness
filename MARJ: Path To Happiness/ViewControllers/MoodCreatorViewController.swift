@@ -65,6 +65,21 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for value in counter..<positiveLabels.count {
             positiveLabels[value].text = ""
         }
+        
+        
+        
+        var array1: [String] = []
+        var counter1 = 0
+        for (key,value) in myCurrentMood.negativeMoods {
+            if value == true {
+                negativeLabels[counter1].text = key
+                counter1 += 1
+            }
+        }
+        
+        for value in counter1..<negativeLabels.count {
+            negativeLabels[value].text = ""
+        }
     }
     
     
