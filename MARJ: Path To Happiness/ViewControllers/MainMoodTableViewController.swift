@@ -42,16 +42,17 @@ class MainMoodTableViewController: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
+    let createdMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
+        
+        
+        
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
+    
+    
+    
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
         
