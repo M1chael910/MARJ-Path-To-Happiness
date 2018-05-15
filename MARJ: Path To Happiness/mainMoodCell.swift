@@ -11,7 +11,8 @@ import UIKit
 
 class mainMoodCell: UITableViewCell {
     
+    @IBOutlet weak var dateLabel: UILabel!
     
-    
+
     
 }

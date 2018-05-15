@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +21,25 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="path of least resistance" translatesAutoresizingMaskIntoConstraints="NO" id="OTy-hI-z11">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow MARJ on the Path to Happiness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVs-t9-lg3">
                                 <rect key="frame" x="16" y="34" width="343" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.62932477679999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OTy-hI-z11" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="3Pd-dE-3Sb"/>
+                            <constraint firstItem="pVs-t9-lg3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="34" id="6Oi-Fq-joq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pVs-t9-lg3" secondAttribute="trailing" constant="16" id="KtF-bm-wMs"/>
+                            <constraint firstItem="OTy-hI-z11" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="RvE-9j-eHW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pVs-t9-lg3" secondAttribute="bottom" constant="493" id="Vw5-Mn-58t"/>
+                            <constraint firstItem="OTy-hI-z11" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottomMargin" id="h2n-dM-coM"/>
+                            <constraint firstItem="OTy-hI-z11" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="kn8-Az-QTc"/>
+                            <constraint firstItem="pVs-t9-lg3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="wo7-Nf-8CI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

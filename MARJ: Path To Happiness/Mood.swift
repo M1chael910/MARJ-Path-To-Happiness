@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mood {
+class Mood: Codable {
     var PositiveMoods: [String : Bool] = ["Excited" : false, "Optimistic" : false, "Calm" : false, "Confident" : false, "Bold" : false, "Happy" : false, "Relaxed" : false, "Peaceful": false]
     var negativeMoods: [String : Bool] = ["Depressed" : false, "Heartbroken": false , "Upset": false, "Pesamistic": false, "Lonely": false, "Anxious": false, "Tired": false, "Guilty": false]
     var description: String
