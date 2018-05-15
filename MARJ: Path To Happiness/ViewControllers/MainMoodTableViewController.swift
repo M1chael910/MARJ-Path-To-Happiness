@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
-    var player:AVAudioPlayer = AVAudioPlayer()
+    var player: AVAudioPlayer = AVAudioPlayer()
     
-    var moods: [Mood]!
+    var moods: [Mood] = []
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -21,6 +21,8 @@ class MainMoodTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let mood = Mood(description: "Test", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!))
+        moods.append(mood)
         
         do
         {
@@ -106,17 +108,8 @@ class MainMoodTableViewController: UITableViewController {
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToCreator" {
-            
-            
-            
-            if let newView = segue.destination as? MoodCreatorViewController {
-                newView.myMoods = moods
-                if let mood = newView.myMood {
-                    moods.append(mood)
-                }
-                moods = nil
-            }
-            
+            let newView = segue.destination as! MoodCreatorViewController
+            newView.myMoods = moods           
         }
         
         

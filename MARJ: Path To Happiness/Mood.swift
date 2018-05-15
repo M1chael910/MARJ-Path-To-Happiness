@@ -11,10 +11,10 @@ import Foundation
 class Mood {
     var PositiveMoods: [String : Bool] = ["Excited" : false, "Optimistic" : false, "Calm" : false, "Confident" : false, "Bold" : false, "Happy" : false, "Relaxed" : false, "Peaceful": false]
     var negativeMoods: [String : Bool] = ["Depressed" : false, "Heartbroken": false , "Upset": false, "Pesamistic": false, "Lonely": false, "Anxious": false, "Tired": false, "Guilty": false]
-    var description: String?
-    var date: Date?
+    var description: String
+    var date: Date
     
-    init?(description:String, date: Date) {
+    init(description:String, date: Date) {
         self.description = description
         self.date = date
     }

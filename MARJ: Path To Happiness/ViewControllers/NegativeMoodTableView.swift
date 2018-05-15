@@ -40,10 +40,7 @@ class NegativeMoodTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NegativeMoods", for: indexPath)
-        
-        for mood in negativeMoods.keys {
-            cell.textLabel?.text = mood
-        }
+        cell.textLabel?.text = Array(negativeMoods.keys) [indexPath.row]
    
         return cell
     }
@@ -58,11 +55,8 @@ class NegativeMoodTableView: UITableViewController {
         var tapIndex = 0
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
-                if currentCell.accessoryType == .checkmark {
-                    currentCell.accessoryType = .none
-                }
-                currentCell.accessoryType = .checkmark
-                
+               currentCell.accessoryType = .checkmark
+                currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
             }
         
     }

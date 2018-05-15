@@ -13,7 +13,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     var myMoods: [Mood]!
     
     
-    var myMood: Mood!
+    var myCurrentMood: Mood!
     
     
     @IBOutlet var positiveLabels: [UILabel]!
@@ -28,6 +28,9 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myCurrentMood = myMoods.last
+        
         
         scrollView.isScrollEnabled = true
         for label in positiveLabels {
@@ -49,7 +52,20 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        var array: [String] = []
+        var counter = 0
+        for (key,value) in myCurrentMood.PositiveMoods {
+            if value == true {
+                positiveLabels[counter].text = key
+                counter += 1
+            }
+        }
+        
+        for value in counter..<positiveLabels.count {
+            positiveLabels[value].text = ""
+        }
+    }
     
     
     
@@ -66,14 +82,14 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "positiveSegue"{
-            let positiveView = segue.destination as? PositiveMoodTableView
-            positiveView?.positiveMoods = myMood.PositiveMoods
+            let positiveView = segue.destination as! PositiveMoodTableView
+            positiveView.currentMood = myCurrentMood
         }
         
         
         if segue.identifier == "negativeSegue" {
-            let negativeView = segue.destination as? NegativeMoodTableView
-            negativeView?.negativeMoods = myMood.negativeMoods
+            let negativeView = segue.destination as! NegativeMoodTableView
+            negativeView.currentMood = myCurrentMood
         }
         
     }

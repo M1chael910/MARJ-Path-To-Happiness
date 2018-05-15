@@ -11,11 +11,13 @@ import UIKit
 class PositiveMoodTableView: UITableViewController {
     
     var positiveMoods: [String : Bool]!
-    
-    
+    var currentMood: Mood!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        positiveMoods = currentMood.PositiveMoods
+        
         tableView.delegate = self
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,10 +32,8 @@ class PositiveMoodTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveMoods", for: indexPath)
+        cell.textLabel?.text = Array(positiveMoods.keys)[indexPath.row]
         
-        for mood in positiveMoods.keys {
-            cell.textLabel?.text = mood
-        }
         return cell
     }
     
@@ -42,9 +42,22 @@ class PositiveMoodTableView: UITableViewController {
             
             if let currentCell = tableView.cellForRow(at: Index) {
                 currentCell.accessoryType = .checkmark
+                currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
+                
             }
+            
+            
+            
         }
     }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return false
     }
