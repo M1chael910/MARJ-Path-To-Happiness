@@ -107,7 +107,15 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
             negativeView.currentMood = myCurrentMood
         }
         
+        if segue.identifier == "saveMoodSegue" {
+            let mainMoodView = segue.destination as! MainMoodTableViewController
+             mainMoodView.moods.append(myCurrentMood)
+        }
+        
     }
+    
+    
+
  
 
 }

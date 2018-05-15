@@ -13,7 +13,7 @@ class MainMoodTableViewController: UITableViewController {
     var player: AVAudioPlayer = AVAudioPlayer()
     
     var moods: [Mood] = []
-    
+
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -21,8 +21,8 @@ class MainMoodTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mood = Mood(description: "Test", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!))
-        moods.append(mood)
+//        let mood = Mood(description: "Test", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!))
+//        moods.append(mood)
         
         do
         {
