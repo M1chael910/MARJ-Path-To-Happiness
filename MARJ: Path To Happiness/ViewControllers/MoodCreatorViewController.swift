@@ -25,12 +25,11 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var moodDescriptionTextField: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
-
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         myCurrentMood = myMoods.last
-        
         
         scrollView.isScrollEnabled = true
         for label in positiveLabels {
@@ -58,7 +57,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for (key,value) in myCurrentMood.PositiveMoods {
             if value == true {
                 positiveLabels[counter].text = key
-                counter += 1
+                counter += 2
             }
         }
         
@@ -73,7 +72,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for (key,value) in myCurrentMood.negativeMoods {
             if value == true {
                 negativeLabels[counter1].text = key
-                counter1 += 1
+                counter1 += 2
             }
         }
         

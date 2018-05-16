@@ -20,10 +20,6 @@ class MainMoodTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let mood = Mood(description: "Test", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 0)!))
-//        moods.append(mood)
-        
         do
         {
             let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
@@ -45,7 +41,7 @@ class MainMoodTableViewController: UITableViewController {
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let createdMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-        
+    moods.append(createdMood)
         
         
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
