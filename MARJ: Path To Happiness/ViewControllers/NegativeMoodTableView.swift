@@ -55,20 +55,23 @@ class NegativeMoodTableView: UITableViewController {
         var tapIndex = 0
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
+                tapIndex += 1
                 currentCell.accessoryType = .checkmark
                 currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
                 
                 
             }
             
-            
+          
         }
     }
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        var tapIndex = 0
+        var tapIndex1 = 0
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
+                tapIndex1 += 1
                 currentCell.accessoryType = .none
+                currentMood.negativeMoods[(currentCell.textLabel?.text)!] = false
              }
         }
     }

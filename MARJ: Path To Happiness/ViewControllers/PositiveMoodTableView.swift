@@ -15,13 +15,10 @@ class PositiveMoodTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         positiveMoods = currentMood.PositiveMoods
-        
         tableView.delegate = self
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 

@@ -40,8 +40,8 @@ class MainMoodTableViewController: UITableViewController {
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
-    let createdMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-    moods.append(createdMood)
+    let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
+    moods.append(NewMood)
         
         
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
