@@ -30,7 +30,6 @@ class PositiveMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveMoods", for: indexPath)
         cell.textLabel?.text = Array(positiveMoods.keys)[indexPath.row]
-        
         return cell
     }
     

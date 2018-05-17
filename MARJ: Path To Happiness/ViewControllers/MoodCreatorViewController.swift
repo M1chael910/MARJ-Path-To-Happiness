@@ -18,7 +18,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var moodDescriptionTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         myCurrentMood = myMoods.first
@@ -85,14 +84,10 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
             let mainMoodView = segue.destination as! MainMoodTableViewController
             mainMoodView.moods.append(myCurrentMood)
         }
-        
-        
-        if segue.identifier == "positiveSegue"{
+        if segue.identifier == "positiveSegue" {
             let positiveView = segue.destination as! PositiveMoodTableView
             positiveView.currentMood = myCurrentMood
         }
-        
-        
         if segue.identifier == "negativeSegue" {
             let negativeView = segue.destination as! NegativeMoodTableView
             negativeView.currentMood = myCurrentMood

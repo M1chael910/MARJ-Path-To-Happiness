@@ -15,6 +15,7 @@ class MainMoodTableViewController: UITableViewController {
     var moods: [Mood] = []
 
     override func viewDidAppear(_ animated: Bool) {
+        tableView.beginUpdates()
         tableView.reloadData()
     }
     
@@ -71,7 +72,7 @@ class MainMoodTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
         if !moods.isEmpty {
             let mood = moods[indexPath.row]
-            cell.dateLabel.text = mood.description
+            cell.dateLabel.text = mood.date.description
             return cell
         }
         return UITableViewCell()
