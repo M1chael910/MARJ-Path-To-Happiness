@@ -57,7 +57,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for (key,value) in myCurrentMood.PositiveMoods {
             if value == true {
                 positiveLabels[counter].text = key
-                counter += 2
+                counter += 1
             }
         }
         
@@ -72,7 +72,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for (key,value) in myCurrentMood.negativeMoods {
             if value == true {
                 negativeLabels[counter1].text = key
-                counter1 += 2
+                counter1 += 1
             }
         }
         
@@ -98,6 +98,14 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "saveMoodSegue" {
+            let mainMoodView = segue.destination as! MainMoodTableViewController
+            mainMoodView.moods.append(myCurrentMood)
+            print(myCurrentMood.negativeMoods)
+        }
+        
+        
         if segue.identifier == "positiveSegue"{
             let positiveView = segue.destination as! PositiveMoodTableView
             positiveView.currentMood = myCurrentMood
@@ -109,10 +117,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
             negativeView.currentMood = myCurrentMood
         }
         
-        if segue.identifier == "saveMoodSegue" {
-            let mainMoodView = segue.destination as! MainMoodTableViewController
-             mainMoodView.moods.append(myCurrentMood)
-        }
         
     }
     
