@@ -11,7 +11,6 @@ import UIKit
 class NegativeMoodTableView: UITableViewController {
     
     var currentMood: Mood!
-    
     var negativeMoods: [String : Bool]!
     
     override func viewDidLoad() {
@@ -62,6 +61,10 @@ class NegativeMoodTableView: UITableViewController {
                 
             }
             
+            if tapIndex == 1 {
+                tableView.backgroundColor = .red
+            }
+            
           
         }
     }
@@ -81,12 +84,6 @@ class NegativeMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
-    
-    
-    
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

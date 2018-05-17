@@ -11,44 +11,36 @@ import UIKit
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
     var myMoods: [Mood]!
-    
-    
     var myCurrentMood: Mood!
     
-    
     @IBOutlet var positiveLabels: [UILabel]!
-    
     @IBOutlet var negativeLabels: [UILabel]!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var moodDescriptionTextField: UITextField!
-    
     @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        myCurrentMood = myMoods.last
-        
+        myCurrentMood = myMoods.first
         scrollView.isScrollEnabled = true
+        
         for label in positiveLabels {
             label.textAlignment = .center
             label.isEnabled = true
             label.text = ""
             label.alpha = 1
         }
+        
         for label in negativeLabels {
             label.textAlignment = .center
             label.text = ""
             label.isEnabled = true
             label.alpha = 1
         }
+        
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
-        
         scrollView.bounces = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,9 +56,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for value in counter..<positiveLabels.count {
             positiveLabels[value].text = ""
         }
-        
-        
-        
+
         var array1: [String] = []
         var counter1 = 0
         for (key,value) in myCurrentMood.negativeMoods {
@@ -93,16 +83,13 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func negativeMoodButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "negativeSegue", sender: self)
     }
-
     
-
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "saveMoodSegue" {
             let mainMoodView = segue.destination as! MainMoodTableViewController
             mainMoodView.moods.append(myCurrentMood)
-            print(myCurrentMood.negativeMoods)
+            print(myCurrentMood.negativeMoods, myCurrentMood.date.timeIntervalSinceNow)
         }
         
         
@@ -116,12 +103,5 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
             let negativeView = segue.destination as! NegativeMoodTableView
             negativeView.currentMood = myCurrentMood
         }
-        
-        
     }
-    
-    
-
- 
-
 }
