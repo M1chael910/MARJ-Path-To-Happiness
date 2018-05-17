@@ -69,8 +69,12 @@ class MainMoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
-        
-        return cell
+        if !moods.isEmpty {
+            let mood = moods[indexPath.row]
+            cell.dateLabel.text = mood.description
+            return cell
+        }
+        return UITableViewCell()
     }
     
     

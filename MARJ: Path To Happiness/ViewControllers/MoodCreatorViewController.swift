@@ -71,11 +71,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
-    
-    
-    
-    
     @IBAction func positiveMoodButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "positiveSegue", sender: self)
     }
@@ -89,7 +84,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         if segue.identifier == "saveMoodSegue" {
             let mainMoodView = segue.destination as! MainMoodTableViewController
             mainMoodView.moods.append(myCurrentMood)
-            print(myCurrentMood.negativeMoods, myCurrentMood.date.timeIntervalSinceNow)
         }
         
         

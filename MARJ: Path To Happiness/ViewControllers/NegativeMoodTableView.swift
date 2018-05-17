@@ -57,15 +57,7 @@ class NegativeMoodTableView: UITableViewController {
                 tapIndex += 1
                 currentCell.accessoryType = .checkmark
                 currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
-                
-                
             }
-            
-            if tapIndex == 1 {
-                tableView.backgroundColor = .red
-            }
-            
-          
         }
     }
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
