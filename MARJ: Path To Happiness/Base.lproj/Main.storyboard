@@ -69,6 +69,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxresdefault" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-Qp-FEA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-JK-NoZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,6 +234,12 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ePJ-BT-zrh" firstAttribute="bottom" secondItem="dCJ-Qp-FEA" secondAttribute="bottom" id="8M6-4v-y0z"/>
+                            <constraint firstItem="dCJ-Qp-FEA" firstAttribute="leading" secondItem="ePJ-BT-zrh" secondAttribute="leading" id="J34-4j-prY"/>
+                            <constraint firstItem="dCJ-Qp-FEA" firstAttribute="top" secondItem="ePJ-BT-zrh" secondAttribute="top" id="UAl-S9-z4L"/>
+                            <constraint firstItem="ePJ-BT-zrh" firstAttribute="trailing" secondItem="dCJ-Qp-FEA" secondAttribute="trailing" id="erZ-7g-Yxw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ePJ-BT-zrh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="LCF-1U-Xbw">
@@ -349,4 +358,7 @@
             <point key="canvasLocation" x="1230" y="63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="maxresdefault" width="1280" height="720"/>
+    </resources>
 </document>
