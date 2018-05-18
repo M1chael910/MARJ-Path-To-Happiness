@@ -80,10 +80,11 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "saveMoodSegue" {
-            let mainMoodView = segue.destination as! MainMoodTableViewController
-            mainMoodView.moods.append(myCurrentMood)
-        }
+//        if segue.identifier == "saveMoodSegue" {
+//            let mainMoodView = segue.destination as! MainMoodTableViewController
+//          mainMoodView.moods.append(myCurrentMood)
+//         print("Here!!")
+//        }
         if segue.identifier == "positiveSegue" {
             let positiveView = segue.destination as! PositiveMoodTableView
             positiveView.currentMood = myCurrentMood

@@ -15,12 +15,10 @@ class MainMoodTableViewController: UITableViewController {
     var moods: [Mood] = []
 
     override func viewDidAppear(_ animated: Bool) {
-        tableView.beginUpdates()
         tableView.reloadData()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func PlayMusic() {
         do
         {
             let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
@@ -32,6 +30,14 @@ class MainMoodTableViewController: UITableViewController {
             //ERROR
         }
         self.player.play()
+    }
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PlayMusic()
         
         
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +58,7 @@ class MainMoodTableViewController: UITableViewController {
     
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
-        
+        print(moods)
     }
     
     // MARK: - Table view data source
@@ -64,7 +70,11 @@ class MainMoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return moods.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     
@@ -72,7 +82,9 @@ class MainMoodTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
         if !moods.isEmpty {
             let mood = moods[indexPath.row]
-            cell.dateLabel.text = mood.date.description
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy H:mm a"
+            cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
             return cell
         }
         return UITableViewCell()
