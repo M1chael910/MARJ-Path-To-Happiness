@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
+    
     var player: AVAudioPlayer = AVAudioPlayer()
     
     var moods: [Mood] = []
@@ -49,8 +50,6 @@ class MainMoodTableViewController: UITableViewController {
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
     moods.append(NewMood)
-        
-        
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
@@ -58,18 +57,15 @@ class MainMoodTableViewController: UITableViewController {
     
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
-        print(moods)
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return moods.count
     }
     

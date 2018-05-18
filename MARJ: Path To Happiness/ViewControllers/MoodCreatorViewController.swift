@@ -20,54 +20,44 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        myCurrentMood = myMoods.first
+        myCurrentMood = myMoods.last
         scrollView.isScrollEnabled = true
-        
-        for label in positiveLabels {
-            label.textAlignment = .center
-            label.isEnabled = true
-            label.text = ""
-            label.alpha = 1
-        }
-        
-        for label in negativeLabels {
-            label.textAlignment = .center
-            label.text = ""
-            label.isEnabled = true
-            label.alpha = 1
-        }
-        
+                
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
         scrollView.bounces = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var array: [String] = []
-        var counter = 0
-        for (key,value) in myCurrentMood.PositiveMoods {
-            if value == true {
-                positiveLabels[counter].text = key
-                counter += 1
+        
+        var array1: [String] = []
+        var NegativeCounter = 0
+        for (negativeKey, negativeValue) in myCurrentMood.negativeMoods {
+            if negativeValue == true {
+                negativeLabels[NegativeCounter].text = negativeKey
+                NegativeCounter += 1
             }
         }
         
-        for value in counter..<positiveLabels.count {
+        for value in NegativeCounter..<negativeLabels.count {
+            negativeLabels[value].text = ""
+        }
+        
+        
+        var array: [String] = []
+        var positiveCounter = 0
+        for (positiveKey,positiveValue) in myCurrentMood.PositiveMoods {
+            if positiveValue == true {
+                positiveLabels[positiveCounter].text = positiveKey
+                positiveCounter += 1
+            }
+        }
+        
+        for value in positiveCounter..<positiveLabels.count {
             positiveLabels[value].text = ""
         }
 
-        var array1: [String] = []
-        var counter1 = 0
-        for (key,value) in myCurrentMood.negativeMoods {
-            if value == true {
-                negativeLabels[counter1].text = key
-                counter1 += 1
-            }
-        }
-        
-        for value in counter1..<negativeLabels.count {
-            negativeLabels[value].text = ""
-        }
+
     }
     
     @IBAction func positiveMoodButton(_ sender: UIButton) {
@@ -79,12 +69,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        if segue.identifier == "saveMoodSegue" {
-//            let mainMoodView = segue.destination as! MainMoodTableViewController
-//          mainMoodView.moods.append(myCurrentMood)
-//         print("Here!!")
-//        }
         if segue.identifier == "positiveSegue" {
             let positiveView = segue.destination as! PositiveMoodTableView
             positiveView.currentMood = myCurrentMood
