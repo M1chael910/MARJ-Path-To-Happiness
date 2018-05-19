@@ -37,7 +37,7 @@ class MainMoodTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PlayMusic()
+//        PlayMusic()
         
         
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,7 +58,7 @@ class MainMoodTableViewController: UITableViewController {
     
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
-        print(moods)
+    
     }
     
     // MARK: - Table view data source
@@ -81,9 +81,23 @@ class MainMoodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
         if !moods.isEmpty {
+            var positiveArray: [Bool] = []
+            var negativeArray: [Bool] = []
             let mood = moods[indexPath.row]
+            for mood in mood.PositiveMoods {
+                if mood.value == true {
+                    positiveArray.append(mood.value)
+                }
+            }
+            for mood in mood.negativeMoods {
+                if mood.value == true {
+                    negativeArray.append(mood.value)
+                }
+            }
+            cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
+            cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yyyy H:mm a"
+            dateFormatter.dateFormat = "MM/dd/yyyy"
             cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
             return cell
         }
@@ -105,7 +119,7 @@ class MainMoodTableViewController: UITableViewController {
      // Delete the row from the data source
      tableView.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+   
      }
      }
  

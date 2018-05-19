@@ -36,6 +36,7 @@ class PositiveMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
+                currentCell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
                 currentCell.accessoryType = .checkmark
                 currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
            }
