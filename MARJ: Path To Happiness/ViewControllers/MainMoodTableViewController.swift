@@ -33,11 +33,29 @@ class MainMoodTableViewController: UITableViewController {
     }
     
     
+    func saveData() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("moods").appendingPathExtension("plist")
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedMoods = try? propertyListEncoder.encode(moods)
+        
+        try? encodedMoods?.write(to: archiveURL, options: .noFileProtection)
+        
+        
+        let propertyListDecoder = PropertyListDecoder()
+        if let retrievedMoodsData = try? Data(contentsOf: archiveURL), let decodedMoods = try? propertyListDecoder.decode(Array<Mood>.self, from: retrievedMoodsData) {
+            tableView.reloadData()
+        }
+        }
+        
+        
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        PlayMusic()
+        PlayMusic()
+        saveData()
         
         
         // self.clearsSelectionOnViewWillAppear = false
@@ -94,8 +112,20 @@ class MainMoodTableViewController: UITableViewController {
                     negativeArray.append(mood.value)
                 }
             }
+            
             cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
             cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
+            
+            if positiveArray.count > negativeArray.count {
+                cell.backgroundColor = .green
+            } 
+            if negativeArray.count > positiveArray.count {
+                cell.backgroundColor = .red
+            }
+            if negativeArray.count == positiveArray.count {
+                cell.backgroundColor = .cyan
+            }
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/yyyy"
             cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
@@ -118,6 +148,7 @@ class MainMoodTableViewController: UITableViewController {
      if editingStyle == .delete {
      // Delete the row from the data source
      tableView.deleteRows(at: [indexPath], with: .fade)
+     moods.remove(at: indexPath.row)
      } else if editingStyle == .insert {
    
      }
