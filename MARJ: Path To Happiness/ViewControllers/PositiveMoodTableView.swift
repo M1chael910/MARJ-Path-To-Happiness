@@ -39,6 +39,7 @@ class PositiveMoodTableView: UITableViewController {
                 currentCell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
                 currentCell.accessoryType = .checkmark
                 currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
+                
            }
         }
     }

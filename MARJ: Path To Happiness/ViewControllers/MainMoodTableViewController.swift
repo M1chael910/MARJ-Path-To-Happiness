@@ -15,6 +15,7 @@ class MainMoodTableViewController: UITableViewController {
     var moods: [Mood] = []
 
     override func viewDidAppear(_ animated: Bool) {
+        
         tableView.reloadData()
     }
     
@@ -44,7 +45,7 @@ class MainMoodTableViewController: UITableViewController {
         
         let propertyListDecoder = PropertyListDecoder()
         if let retrievedMoodsData = try? Data(contentsOf: archiveURL), let decodedMoods = try? propertyListDecoder.decode(Array<Mood>.self, from: retrievedMoodsData) {
-            tableView.reloadData()
+            
         }
         }
         
@@ -56,19 +57,13 @@ class MainMoodTableViewController: UITableViewController {
         super.viewDidLoad()
         PlayMusic()
         saveData()
-        
-        
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
     moods.append(NewMood)
-        
-        
+
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
@@ -102,6 +97,7 @@ class MainMoodTableViewController: UITableViewController {
             var positiveArray: [Bool] = []
             var negativeArray: [Bool] = []
             let mood = moods[indexPath.row]
+
             for mood in mood.PositiveMoods {
                 if mood.value == true {
                     positiveArray.append(mood.value)
@@ -112,6 +108,7 @@ class MainMoodTableViewController: UITableViewController {
                     negativeArray.append(mood.value)
                 }
             }
+        
             
             cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
             cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
@@ -130,9 +127,11 @@ class MainMoodTableViewController: UITableViewController {
             dateFormatter.dateFormat = "MM/dd/yyyy"
             cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
             return cell
-        }
+            }
+        
         return UITableViewCell()
-    }
+        
+        }
     
     
     
@@ -176,5 +175,8 @@ class MainMoodTableViewController: UITableViewController {
         
      }
  
-    
 }
+
+
+
+
