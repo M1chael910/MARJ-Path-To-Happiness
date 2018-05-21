@@ -61,6 +61,13 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
 
 
     }
+
+    
+    @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
+        print("Cancel button was pressed")
+    }
+    
+    
     
     @IBAction func positiveMoodButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "positiveSegue", sender: self)

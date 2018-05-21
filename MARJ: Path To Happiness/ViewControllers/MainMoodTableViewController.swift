@@ -16,7 +16,6 @@ class MainMoodTableViewController: UITableViewController {
     var moods: [Mood] = []
 
     override func viewDidAppear(_ animated: Bool) {
-        
         tableView.reloadData()
     }
     
@@ -166,10 +165,6 @@ class MainMoodTableViewController: UITableViewController {
             let newView = segue.destination as! MoodCreatorViewController
             newView.myMoods = moods           
         }
-        
-        
-        
-        
      }
  
 }
