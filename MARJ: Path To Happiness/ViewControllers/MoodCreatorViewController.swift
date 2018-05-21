@@ -10,6 +10,8 @@ import UIKit
 
 class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
+    
+    
     var myMoods: [Mood]!
     var myCurrentMood: Mood!
     
@@ -24,7 +26,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         scrollView.isScrollEnabled = true
                 
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 800)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1200)
         scrollView.bounces = true
     }
     

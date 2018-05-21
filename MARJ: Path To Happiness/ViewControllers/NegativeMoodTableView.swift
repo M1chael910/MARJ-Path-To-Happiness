@@ -56,7 +56,10 @@ class NegativeMoodTableView: UITableViewController {
             if let currentCell = tableView.cellForRow(at: Index) {
                 tapIndex += 1
                 currentCell.accessoryType = .checkmark
+                currentCell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+                currentCell.accessoryType = .checkmark
                 currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
+                
             }
         }
     }
