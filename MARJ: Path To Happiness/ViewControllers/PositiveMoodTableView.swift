@@ -38,14 +38,15 @@ class PositiveMoodTableView: UITableViewController {
                 positiveTapIndex += 1
                 if positiveTapIndex == 1 {
                     currentCell.accessoryType = .checkmark
+                    currentCell.backgroundColor = .white
                     currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
                 }
                 if positiveTapIndex == 2 {
+                    currentCell.backgroundColor = .white
                     currentCell.accessoryType = .none
                     currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = false
-                    positiveTapIndex = 0
+                    positiveTapIndex = 1
                 }
-                
            }
         }
     }
