@@ -10,11 +10,8 @@ import UIKit
 import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
-    
     var player: AVAudioPlayer = AVAudioPlayer()
-    
     var moods: [Mood] = []
-
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -23,7 +20,7 @@ class MainMoodTableViewController: UITableViewController {
         do
         {
             let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
-            try player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
         }
         catch
             
@@ -32,31 +29,9 @@ class MainMoodTableViewController: UITableViewController {
         }
         self.player.play()
     }
-    
-    
-    func saveData() {
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let archiveURL = documentsDirectory.appendingPathComponent("moods").appendingPathExtension("plist")
-        let propertyListEncoder = PropertyListEncoder()
-        let encodedMoods = try? propertyListEncoder.encode(moods)
-        
-        try? encodedMoods?.write(to: archiveURL, options: .noFileProtection)
-        
-        
-        let propertyListDecoder = PropertyListDecoder()
-        if let retrievedMoodsData = try? Data(contentsOf: archiveURL), let decodedMoods = try? propertyListDecoder.decode(Array<Mood>.self, from: retrievedMoodsData) {
-            
-        }
-        }
-        
-        
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         PlayMusic()
-        saveData()
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
 
@@ -104,8 +79,6 @@ class MainMoodTableViewController: UITableViewController {
                     negativeArray.append(mood.value)
                 }
             }
-        
-            
             cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
             cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
             
@@ -124,9 +97,7 @@ class MainMoodTableViewController: UITableViewController {
             cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
             return cell
             }
-        
         return UITableViewCell()
-        
         }
     
     
@@ -145,15 +116,14 @@ class MainMoodTableViewController: UITableViewController {
      tableView.deleteRows(at: [indexPath], with: .fade)
      moods.remove(at: indexPath.row)
      } else if editingStyle == .insert {
-   
+
      }
-     }
+}
  
     
     
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
      }
  
      override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -166,7 +136,6 @@ class MainMoodTableViewController: UITableViewController {
             newView.myMoods = moods           
         }
      }
- 
 }
 
 

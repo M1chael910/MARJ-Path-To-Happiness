@@ -12,6 +12,7 @@ class PositiveMoodTableView: UITableViewController {
     
     var positiveMoods: [String : Bool]!
     var currentMood: Mood!
+    var positiveTapIndex: Int = 0 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,6 @@ class PositiveMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return positiveMoods.count
     }
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PositiveMoods", for: indexPath)
         cell.textLabel?.text = Array(positiveMoods.keys)[indexPath.row]
@@ -36,9 +35,16 @@ class PositiveMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
-                currentCell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-                currentCell.accessoryType = .checkmark
-                currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
+                positiveTapIndex += 1
+                if positiveTapIndex == 1 {
+                    currentCell.accessoryType = .checkmark
+                    currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
+                }
+                if positiveTapIndex == 2 {
+                    currentCell.accessoryType = .none
+                    currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = false
+                    positiveTapIndex = 0
+                }
                 
            }
         }
