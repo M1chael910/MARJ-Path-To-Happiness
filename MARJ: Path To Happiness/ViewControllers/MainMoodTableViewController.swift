@@ -133,7 +133,12 @@ class MainMoodTableViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToCreator" {
             let newView = segue.destination as! MoodCreatorViewController
-            newView.myMoods = moods           
+            newView.myMoods = moods
+            newView.myMoods = moods
+            let NVC = segue.destination as! SelectedLogViewController
+            let currentRow = tableView.indexPathForSelectedRow?.row
+            
+            
         }
      }
 }
