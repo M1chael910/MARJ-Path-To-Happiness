@@ -53,6 +53,7 @@
                                     <outlet property="dateLabel" destination="cna-WG-fLN" id="dFQ-aX-Mqb"/>
                                     <outlet property="negativeMoodLabel" destination="4G9-or-M5I" id="FWk-B2-yvd"/>
                                     <outlet property="positiveMoodLabel" destination="6Vh-t3-5BT" id="DuT-23-yUr"/>
+                                    <segue destination="BwG-iA-ea8" kind="show" id="fB8-Zf-lRr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,6 +77,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0k-KB-Qbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2269.5999999999999" y="62.518740629685162"/>
+        </scene>
+        <!--SelectedLogViewController-->
+        <scene sceneID="atT-PR-TSB">
+            <objects>
+                <viewController title="SelectedLogViewController" id="BwG-iA-ea8" customClass="SelectedLogViewController" customModule="MARJ__Path_To_Happiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lr0-Pd-x9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-aK-vgE">
+                                <rect key="frame" x="16" y="64" width="324" height="583"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aRb-lI-zXH"/>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="H3z-aK-vgE" id="Vbw-yX-hDc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdN-wa-koU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3048.8000000000002" y="-651.72413793103453"/>
         </scene>
         <!--Title-->
         <scene sceneID="dYL-tx-ikz">
