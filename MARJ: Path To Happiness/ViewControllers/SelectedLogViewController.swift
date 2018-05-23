@@ -15,7 +15,7 @@ class SelectedLogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "\(SelectedMood.date)"
         
     }
 

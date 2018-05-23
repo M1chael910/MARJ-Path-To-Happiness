@@ -135,10 +135,10 @@ class MainMoodTableViewController: UITableViewController {
             let newView = segue.destination as! MoodCreatorViewController
             newView.myMoods = moods
             newView.myMoods = moods
+        }else{
             let NVC = segue.destination as! SelectedLogViewController
             let currentRow = tableView.indexPathForSelectedRow?.row
-            
-            
+            NVC.SelectedMood = moods[currentRow!]
         }
      }
 }
