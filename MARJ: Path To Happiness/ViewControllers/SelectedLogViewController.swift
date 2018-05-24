@@ -11,12 +11,14 @@ import UIKit
 class SelectedLogViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
+    
     var SelectedMood: Mood!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "\(SelectedMood.date)"
-        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        navigationItem.title = "\(dateFormatter.string(from: SelectedMood.date))"
     }
 
     override func didReceiveMemoryWarning() {

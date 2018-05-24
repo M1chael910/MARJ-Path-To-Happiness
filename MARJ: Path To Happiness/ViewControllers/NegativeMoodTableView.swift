@@ -66,7 +66,7 @@ class NegativeMoodTableView: UITableViewController {
                     currentCell.backgroundColor = .white
                     currentCell.accessoryType = .none
                     currentMood.negativeMoods[(currentCell.textLabel?.text)!] = false
-                    negativeTapIndex = 0
+                     negativeTapIndex = 0
                 }
                 
             }

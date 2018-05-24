@@ -45,7 +45,7 @@ class PositiveMoodTableView: UITableViewController {
                     currentCell.backgroundColor = .white
                     currentCell.accessoryType = .none
                     currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = false
-                    positiveTapIndex = 1
+                    positiveTapIndex = 0
                 }
            }
         }

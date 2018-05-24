@@ -82,6 +82,7 @@ class MainMoodTableViewController: UITableViewController {
             cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
             cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
             
+    
             if positiveArray.count > negativeArray.count {
                 cell.backgroundColor = .green
             } 
@@ -116,7 +117,7 @@ class MainMoodTableViewController: UITableViewController {
      tableView.deleteRows(at: [indexPath], with: .fade)
      moods.remove(at: indexPath.row)
      } else if editingStyle == .insert {
-
+        
      }
 }
  
@@ -135,7 +136,7 @@ class MainMoodTableViewController: UITableViewController {
             let newView = segue.destination as! MoodCreatorViewController
             newView.myMoods = moods
             newView.myMoods = moods
-        }else{
+        } else {
             let NVC = segue.destination as! SelectedLogViewController
             let currentRow = tableView.indexPathForSelectedRow?.row
             NVC.SelectedMood = moods[currentRow!]
