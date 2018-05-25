@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9D990E20B5C9A6009A0779 /* SelectedLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D990D20B5C9A6009A0779 /* SelectedLogViewController.swift */; };
 		76606685208F9239003CA2E0 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76606684208F9239003CA2E0 /* Mood.swift */; };
 		76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */; };
 		76B4B60F209776D50080F2B8 /* mainMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4B60E209776D50080F2B8 /* mainMoodCell.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C9D990D20B5C9A6009A0779 /* SelectedLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLogViewController.swift; sourceTree = "<group>"; };
 		76606684208F9239003CA2E0 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoodTableViewController.swift; sourceTree = "<group>"; };
 		76B4B60E209776D50080F2B8 /* mainMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMoodCell.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				76D1A345209B61FC00FC4AD2 /* NegativeMoodTableView.swift */,
 				76D1A347209B620A00FC4AD2 /* PositiveMoodTableView.swift */,
 				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
+				4C9D990D20B5C9A6009A0779 /* SelectedLogViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				76606685208F9239003CA2E0 /* Mood.swift in Sources */,
 				76F67C45208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld in Sources */,
 				76D1A346209B61FC00FC4AD2 /* NegativeMoodTableView.swift in Sources */,
+				4C9D990E20B5C9A6009A0779 /* SelectedLogViewController.swift in Sources */,
 				76D1A348209B620A00FC4AD2 /* PositiveMoodTableView.swift in Sources */,
 				76B4B60F209776D50080F2B8 /* mainMoodCell.swift in Sources */,
 				76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */,

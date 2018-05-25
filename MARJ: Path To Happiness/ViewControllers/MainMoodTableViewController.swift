@@ -10,12 +10,10 @@ import UIKit
 import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
-    
     var player: AVAudioPlayer = AVAudioPlayer()
-    
     var moods: [Mood] = []
-
     override func viewDidAppear(_ animated: Bool) {
+        print("View Did Appear")
         tableView.reloadData()
     }
     
@@ -23,7 +21,7 @@ class MainMoodTableViewController: UITableViewController {
         do
         {
             let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
-            try player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
         }
         catch
             
@@ -32,27 +30,6 @@ class MainMoodTableViewController: UITableViewController {
         }
         self.player.play()
     }
-    
-    
-    func saveData() {
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let archiveURL = documentsDirectory.appendingPathComponent("moods").appendingPathExtension("plist")
-        let propertyListEncoder = PropertyListEncoder()
-        let encodedMoods = try? propertyListEncoder.encode(moods)
-        
-        try? encodedMoods?.write(to: archiveURL, options: .noFileProtection)
-        
-        
-        let propertyListDecoder = PropertyListDecoder()
-        if let retrievedMoodsData = try? Data(contentsOf: archiveURL), let decodedMoods = try? propertyListDecoder.decode(Array<Mood>.self, from: retrievedMoodsData) {
-            
-        }
-        }
-        
-        
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        PlayMusic()
@@ -87,6 +64,7 @@ class MainMoodTableViewController: UITableViewController {
     }
     
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCellId", for: indexPath) as! mainMoodCell
         if !moods.isEmpty {
@@ -104,14 +82,13 @@ class MainMoodTableViewController: UITableViewController {
                     negativeArray.append(mood.value)
                 }
             }
-        
-            
             cell.positiveMoodLabel.text = "\(positiveArray.count) positive feelings"
             cell.negativeMoodLabel.text = "\(negativeArray.count) negative feelings"
             
+    
             if positiveArray.count > negativeArray.count {
                 cell.backgroundColor = .green
-            } 
+            }
             if negativeArray.count > positiveArray.count {
                 cell.backgroundColor = .red
             }
@@ -124,9 +101,7 @@ class MainMoodTableViewController: UITableViewController {
             cell.dateLabel.text = "\(dateFormatter.string(from: mood.date))"
             return cell
             }
-        
         return UITableViewCell()
-        
         }
     
     
@@ -141,19 +116,20 @@ class MainMoodTableViewController: UITableViewController {
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     moods.remove(at: indexPath.row)
-     } else if editingStyle == .insert {
-   
-     }
-     }
+     self.moods.remove(at: indexPath.row)
+     self.tableView.deleteRows(at: [indexPath], with: .fade)
+     self.tableView.reloadData()
+    
+}
+    }
+    
+    
+    
  
     
     
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
      }
  
      override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -163,10 +139,13 @@ class MainMoodTableViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToCreator" {
             let newView = segue.destination as! MoodCreatorViewController
-            newView.myMoods = moods           
+            newView.myMoods = moods
+        } else {
+            let NVC = segue.destination as! SelectedLogViewController
+            let currentRow = tableView.indexPathForSelectedRow?.row
+            NVC.SelectedMood = moods[currentRow!]
         }
      }
- 
 }
 
 

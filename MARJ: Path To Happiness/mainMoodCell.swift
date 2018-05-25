@@ -14,3 +14,5 @@ class mainMoodCell: UITableViewCell {
     @IBOutlet weak var positiveMoodLabel: UILabel!
     @IBOutlet weak var negativeMoodLabel: UILabel!
 }
+
+

@@ -12,10 +12,10 @@ class NegativeMoodTableView: UITableViewController {
     
     var currentMood: Mood!
     var negativeMoods: [String : Bool]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         negativeMoods = currentMood.negativeMoods
         tableView.allowsSelection = true
         tableView.delegate = self
@@ -51,14 +51,16 @@ class NegativeMoodTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var tapIndex = 0
         if let Index = tableView.indexPathForSelectedRow {
+            
             if let currentCell = tableView.cellForRow(at: Index) {
-                tapIndex += 1
-                currentCell.accessoryType = .checkmark
-                currentCell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-                currentCell.accessoryType = .checkmark
-                currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
+                if UITableViewCellAccessoryType.checkmark == currentCell.accessoryType{
+                    currentCell.accessoryType = .none
+                    currentMood.negativeMoods[(currentCell.textLabel?.text)!] = false
+                } else {
+                    currentCell.accessoryType = .checkmark
+                    currentMood.negativeMoods[(currentCell.textLabel?.text)!] = true
+                }
                 
             }
         }

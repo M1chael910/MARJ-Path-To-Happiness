@@ -18,4 +18,6 @@ class Mood: Codable {
         self.description = description
         self.date = date
     }
+    
 }
+
