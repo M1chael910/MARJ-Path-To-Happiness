@@ -18,7 +18,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var positiveLabels: [UILabel]!
     @IBOutlet var negativeLabels: [UILabel]!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var moodDescriptionTextField: UITextField!
+    @IBOutlet weak var moodDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()

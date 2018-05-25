@@ -229,13 +229,6 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-9F-cE2">
-                                        <rect key="frame" x="8" y="476" width="354" height="275"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k5X-sm-4td">
                                         <rect key="frame" x="0.0" y="306" width="375" height="162"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -243,6 +236,13 @@
                                             <!--2018-05-08 16:09:44 +0000-->
                                         </date>
                                     </datePicker>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-db-4Nj">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="260"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="9kI-Sj-WMv" id="4r8-ng-9IA"/>
@@ -273,7 +273,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="k5X-sm-4td" id="BIG-NJ-Sfv"/>
-                        <outlet property="moodDescriptionTextField" destination="P1D-9F-cE2" id="YVy-KS-3XJ"/>
+                        <outlet property="moodDescriptionTextView" destination="IwW-db-4Nj" id="YWN-FQ-lP3"/>
                         <outlet property="scrollView" destination="fi2-JK-NoZ" id="4Uy-t7-YVN"/>
                         <outletCollection property="positiveLabels" destination="uGY-gb-Qar" collectionClass="NSMutableArray" id="oXT-tL-ic1"/>
                         <outletCollection property="positiveLabels" destination="z4q-c4-Xqa" collectionClass="NSMutableArray" id="U4J-sb-jGR"/>
@@ -298,7 +298,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-k7-B7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uax-fI-UXH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="63"/>
+            <point key="canvasLocation" x="3204" y="62.518740629685162"/>
         </scene>
         <!--Positive Mood Table View-->
         <scene sceneID="7Tl-Je-FCH">

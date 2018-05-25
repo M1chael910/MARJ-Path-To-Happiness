@@ -55,7 +55,7 @@ class MainMoodTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PlayMusic()
+//        PlayMusic()
         saveData()
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
