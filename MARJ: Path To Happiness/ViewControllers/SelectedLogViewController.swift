@@ -17,7 +17,7 @@ class SelectedLogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "MM/dd/yyyy h:mm a"
         navigationItem.title = "\(dateFormatter.string(from: SelectedMood.date))"
     }
 
