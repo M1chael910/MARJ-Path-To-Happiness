@@ -30,7 +30,19 @@ class Mood: Codable {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+        PositiveMoods = try container.decode(Dictionary.self, forKey: CodingKeys.positiveMoods)
+        negativeMoods = try container.decode(Dictionary.self, forKey: CodingKeys.negativeMoods)
+        description = try container.decode(String.self, forKey: CodingKeys.description)
+        date = try container.decode(Date.self, forKey: CodingKeys.date)
+    }
+    
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(PositiveMoods, forKey: CodingKeys.positiveMoods)
+        try container.encode(negativeMoods, forKey: CodingKeys.negativeMoods)
+        try container.encode(date, forKey: CodingKeys.date)
+        try container.encode(description, forKey: CodingKeys.description)
     }
     
     

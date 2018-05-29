@@ -17,8 +17,17 @@ class MainMoodTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        if let object = UserDefaults.standard.data(forKey: "myMoods") {
+            if let objectDecoded = try? JSONDecoder().decode([Mood], from: object) {
+                retrievedContact = objectDecoded
+            }
+        } else {
+            print("Decoding Failed")
+        }
+
+        
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {

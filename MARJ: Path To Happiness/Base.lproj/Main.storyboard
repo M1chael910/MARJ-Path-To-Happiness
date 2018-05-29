@@ -324,9 +324,10 @@
                                 <segue destination="uax-fI-UXH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="9Lv-sA-p5X"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="byE-dY-eor">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fHw-MA-0Oy">
                             <connections>
-                                <segue destination="uax-fI-UXH" kind="unwind" identifier="saveMoodSegue" unwindAction="unwindToMainWithSegue:" id="hBM-GR-6xE"/>
+                                <action selector="whenSaveButtonPressed:" destination="9kI-Sj-WMv" id="AHt-ju-v8x"/>
+                                <segue destination="uax-fI-UXH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="1go-5M-bHq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
