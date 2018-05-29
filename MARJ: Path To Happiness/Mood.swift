@@ -13,11 +13,21 @@ class Mood: Codable {
     var negativeMoods: [String : Bool] = ["Depressed" : false, "Heartbroken": false , "Upset": false, "Pesamistic": false, "Lonely": false, "Anxious": false, "Tired": false, "Guilty": false]
     var description: String
     var date: Date
-    
+ 
     init(description:String, date: Date) {
         self.description = description
         self.date = date
     }
+    
+    
+    enum CodingKey1: [String:Bool], CodingKey {
+
+        case positiveMoods
+        case negativeMoods
+
+    }
+    
+    
     
 }
 
