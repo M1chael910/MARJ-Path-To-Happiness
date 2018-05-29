@@ -23,7 +23,7 @@ class MainMoodTableViewController: UITableViewController {
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-    moods.append(NewMood)
+        moods.append(NewMood)
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
@@ -46,6 +46,7 @@ class MainMoodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +72,7 @@ class MainMoodTableViewController: UITableViewController {
     
             if positiveArray.count > negativeArray.count {
                 cell.backgroundColor = .green
-            } 
+            }
             if negativeArray.count > positiveArray.count {
                 cell.backgroundColor = .red
             }
@@ -99,13 +100,15 @@ class MainMoodTableViewController: UITableViewController {
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     moods.remove(at: indexPath.row)
-     } else if editingStyle == .insert {
-        
-     }
+     self.moods.remove(at: indexPath.row)
+     self.tableView.deleteRows(at: [indexPath], with: .fade)
+     self.tableView.reloadData()
 }
+        
+    }
+    
+    
+    
  
     
     
@@ -120,7 +123,6 @@ class MainMoodTableViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToCreator" {
             let newView = segue.destination as! MoodCreatorViewController
-            newView.myMoods = moods
             newView.myMoods = moods
         } else {
             let NVC = segue.destination as! SelectedLogViewController

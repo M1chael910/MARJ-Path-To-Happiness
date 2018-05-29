@@ -35,21 +35,18 @@ class PositiveMoodTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let Index = tableView.indexPathForSelectedRow {
             if let currentCell = tableView.cellForRow(at: Index) {
-                positiveTapIndex += 1
-                if positiveTapIndex == 1 {
-                    currentCell.accessoryType = .checkmark
-                    currentCell.backgroundColor = .white
-                    currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
-                }
-                if positiveTapIndex == 2 {
-                    currentCell.backgroundColor = .white
+                if UITableViewCellAccessoryType.checkmark == currentCell.accessoryType{
                     currentCell.accessoryType = .none
                     currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = false
-                    positiveTapIndex = 0
+                } else {
+                    currentCell.accessoryType = .checkmark
+                    currentMood.PositiveMoods[(currentCell.textLabel?.text)!] = true
                 }
+                
+            }
            }
         }
-    }
+    
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

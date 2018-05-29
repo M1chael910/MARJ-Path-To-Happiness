@@ -17,8 +17,10 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var moodDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         myCurrentMood = myMoods.first
         scrollView.isScrollEnabled = true
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
@@ -52,12 +54,25 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for value in positiveCounter..<positiveLabels.count {
             positiveLabels[value].text = ""
         }
-    }
-
-    
-    @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
+        
         
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let text = moodDescriptionTextView.text {
+            myCurrentMood.description = text
+        } else {
+            myCurrentMood.description = ""
+        }
+    }
+    
+    
+    @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
+
+        
+    }
+    
+    
     
     
     
