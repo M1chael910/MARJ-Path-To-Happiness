@@ -118,8 +118,8 @@ class MainMoodTableViewController: UITableViewController {
      self.moods.remove(at: indexPath.row)
      self.tableView.deleteRows(at: [indexPath], with: .fade)
      self.tableView.reloadData()
-    
 }
+        
     }
     
     
