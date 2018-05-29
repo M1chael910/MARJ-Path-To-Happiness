@@ -69,7 +69,6 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
 
-        
     }
     
     

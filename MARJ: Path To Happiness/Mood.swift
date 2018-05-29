@@ -20,11 +20,17 @@ class Mood: Codable {
     }
     
     
-    enum CodingKey1: [String:Bool], CodingKey {
-
+    enum CodingKeys: CodingKey {
         case positiveMoods
         case negativeMoods
-
+        case description
+        case date
+    }
+    
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
     }
     
     
