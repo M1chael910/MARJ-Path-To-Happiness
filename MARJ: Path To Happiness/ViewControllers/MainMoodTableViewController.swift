@@ -7,31 +7,17 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
-    var player: AVAudioPlayer = AVAudioPlayer()
+    
     var moods: [Mood] = []
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    func PlayMusic() {
-        do
-        {
-            let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-        }
-        catch
-            
-        {
-            //ERROR
-        }
-        self.player.play()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        PlayMusic()
+        
         self.navigationItem.leftBarButtonItem = editButtonItem
     }
 

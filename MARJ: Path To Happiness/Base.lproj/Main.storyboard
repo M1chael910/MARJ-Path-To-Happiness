@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsb-3R-I5Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lXj-RU-7gP">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,7 +76,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0k-KB-Qbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269.5999999999999" y="62.518740629685162"/>
+            <point key="canvasLocation" x="4084.057971014493" y="61.956521739130437"/>
         </scene>
         <!--SelectedLogViewController-->
         <scene sceneID="atT-PR-TSB">
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdN-wa-koU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047.826086956522" y="-652.17391304347836"/>
+            <point key="canvasLocation" x="3954" y="-867"/>
         </scene>
         <!--Title-->
         <scene sceneID="dYL-tx-ikz">
@@ -326,7 +326,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-k7-B7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uax-fI-UXH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="62.518740629685162"/>
+            <point key="canvasLocation" x="5017.3913043478269" y="61.956521739130437"/>
         </scene>
         <!--Positive Mood Table View-->
         <scene sceneID="7Tl-Je-FCH">
@@ -354,7 +354,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Is-NL-aXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4418" y="-181"/>
+            <point key="canvasLocation" x="5787" y="-278"/>
         </scene>
         <!--Negative Mood Table View-->
         <scene sceneID="zo9-Aq-LsG">
@@ -382,28 +382,101 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSo-Fb-Ejo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4417" y="598"/>
+            <point key="canvasLocation" x="5787" y="471"/>
+        </scene>
+        <!--Guided View Controller-->
+        <scene sceneID="l63-Go-iaU">
+            <objects>
+                <viewController id="3dS-xI-lwf" customClass="GuidedViewController" customModule="MARJ__Path_To_Happiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5py-ao-7AG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="71139361_1641416e7b" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-T6-j01">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-Rm-67t">
+                                <rect key="frame" x="54" y="227" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kp-7f-cdV">
+                                <rect key="frame" x="68" y="495" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Grow-Veg-Button"/>
+                                <connections>
+                                    <action selector="left:" destination="3dS-xI-lwf" eventType="touchUpInside" id="4w4-ME-j7W"/>
+                                    <segue destination="dsH-5z-CuV" kind="show" id="ywK-d5-o0f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufV-yv-Hio">
+                                <rect key="frame" x="182" y="495" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Grow-Veg-Button"/>
+                                <connections>
+                                    <action selector="Mid:" destination="3dS-xI-lwf" eventType="touchUpInside" id="QEi-aR-4Jb"/>
+                                    <segue destination="dsH-5z-CuV" kind="show" id="DFG-BB-bEJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HW7-Oz-7mQ">
+                                <rect key="frame" x="296" y="495" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Grow-Veg-Button"/>
+                                <connections>
+                                    <action selector="Right:" destination="3dS-xI-lwf" eventType="touchUpInside" id="9mf-ej-tMb"/>
+                                    <segue destination="dsH-5z-CuV" kind="show" id="Oek-dt-MSf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start things right with a great selection of Music" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-ah-4ha">
+                                <rect key="frame" x="20" y="227" width="357" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Ps-T6-j01" firstAttribute="top" secondItem="XO1-t9-fGR" secondAttribute="top" id="4dt-kF-u0U"/>
+                            <constraint firstItem="XO1-t9-fGR" firstAttribute="bottom" secondItem="8Ps-T6-j01" secondAttribute="bottom" id="OiI-6k-Agm"/>
+                            <constraint firstItem="XO1-t9-fGR" firstAttribute="trailing" secondItem="8Ps-T6-j01" secondAttribute="trailing" id="WBG-WD-DbG"/>
+                            <constraint firstItem="8Ps-T6-j01" firstAttribute="leading" secondItem="XO1-t9-fGR" secondAttribute="leading" id="anv-7Q-stM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XO1-t9-fGR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KIu-1R-P8h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-3H-ClV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3136.2318840579715" y="573.91304347826087"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="MTi-Gx-z0Z">
+        <scene sceneID="Pfn-X1-OFq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gsb-3R-I5Q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lXj-RU-7gP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T33-Yv-Id7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7x9-bW-hAA">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dsH-5z-CuV" kind="relationship" relationship="rootViewController" id="RBu-ex-fVA"/>
+                        <segue destination="3dS-xI-lwf" kind="relationship" relationship="rootViewController" id="nTp-YL-1CJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hJo-c8-F3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGS-pd-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="63"/>
+            <point key="canvasLocation" x="2228.985507246377" y="573.91304347826087"/>
         </scene>
     </scenes>
     <resources>
+        <image name="71139361_1641416e7b" width="500" height="375"/>
+        <image name="Grow-Veg-Button" width="800" height="800"/>
         <image name="maxresdefault" width="1280" height="720"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DFG-BB-bEJ"/>
+    </inferredMetricsTieBreakers>
 </document>
