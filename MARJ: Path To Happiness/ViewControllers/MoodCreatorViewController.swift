@@ -54,13 +54,25 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         for value in positiveCounter..<positiveLabels.count {
             positiveLabels[value].text = ""
         }
+        
+        
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let text = moodDescriptionTextView.text {
+            myCurrentMood.description = text
+        } else {
+            myCurrentMood.description = ""
+        }
+    }
+    
     
     @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
 
         
     }
+    
+    
     
     
     

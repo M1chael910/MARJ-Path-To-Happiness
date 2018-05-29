@@ -13,7 +13,6 @@ class MainMoodTableViewController: UITableViewController {
     var player: AVAudioPlayer = AVAudioPlayer()
     var moods: [Mood] = []
     override func viewDidAppear(_ animated: Bool) {
-        print("View Did Appear")
         tableView.reloadData()
     }
     
@@ -38,7 +37,7 @@ class MainMoodTableViewController: UITableViewController {
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-    moods.append(NewMood)
+        moods.append(NewMood)
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
