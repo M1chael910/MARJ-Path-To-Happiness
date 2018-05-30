@@ -20,6 +20,9 @@
 		76F67C47208A4E1F00E329B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F67C46208A4E1F00E329B2 /* Assets.xcassets */; };
 		76F67C4A208A4E1F00E329B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */; };
 		DE80570D209B6DDF00EA1253 /* canon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE80570C209B6DDF00EA1253 /* canon.mp3 */; };
+		DEBF30D020B71CA60019774B /* GuidedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF30CF20B71CA60019774B /* GuidedViewController.swift */; };
+		DEF204FB20B876BA0086D512 /* gymn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF204FA20B876BA0086D512 /* gymn.mp3 */; };
+		DEF204FD20B876BD0086D512 /* noct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF204FC20B876BD0086D512 /* noct.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		76F67C49208A4E1F00E329B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F67C4B208A4E1F00E329B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE80570C209B6DDF00EA1253 /* canon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canon.mp3; sourceTree = "<group>"; };
+		DEBF30CF20B71CA60019774B /* GuidedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedViewController.swift; sourceTree = "<group>"; };
+		DEF204FA20B876BA0086D512 /* gymn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gymn.mp3; sourceTree = "<group>"; };
+		DEF204FC20B876BD0086D512 /* noct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noct.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 				76D1A347209B620A00FC4AD2 /* PositiveMoodTableView.swift */,
 				76B4B60C209776780080F2B8 /* MainMoodTableViewController.swift */,
 				4C9D990D20B5C9A6009A0779 /* SelectedLogViewController.swift */,
+				DEBF30CF20B71CA60019774B /* GuidedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -89,7 +96,9 @@
 				76F67C40208A4E1F00E329B2 /* Main.storyboard */,
 				76F67C46208A4E1F00E329B2 /* Assets.xcassets */,
 				76F67C48208A4E1F00E329B2 /* LaunchScreen.storyboard */,
+				DEF204FA20B876BA0086D512 /* gymn.mp3 */,
 				DE80570C209B6DDF00EA1253 /* canon.mp3 */,
+				DEF204FC20B876BD0086D512 /* noct.mp3 */,
 				76F67C4B208A4E1F00E329B2 /* Info.plist */,
 				76F67C43208A4E1F00E329B2 /* MARJ__Path_To_Happiness.xcdatamodeld */,
 			);
@@ -156,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F67C4A208A4E1F00E329B2 /* LaunchScreen.storyboard in Resources */,
+				DEF204FB20B876BA0086D512 /* gymn.mp3 in Resources */,
+				DEF204FD20B876BD0086D512 /* noct.mp3 in Resources */,
 				76F67C47208A4E1F00E329B2 /* Assets.xcassets in Resources */,
 				DE80570D209B6DDF00EA1253 /* canon.mp3 in Resources */,
 				76F67C42208A4E1F00E329B2 /* Main.storyboard in Resources */,
@@ -177,6 +188,7 @@
 				76B4B60F209776D50080F2B8 /* mainMoodCell.swift in Sources */,
 				76B4B60D209776780080F2B8 /* MainMoodTableViewController.swift in Sources */,
 				76F67C3D208A4E1F00E329B2 /* AppDelegate.swift in Sources */,
+				DEBF30D020B71CA60019774B /* GuidedViewController.swift in Sources */,
 				76D1A34A209B72AF00FC4AD2 /* MoodCreatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63N3REBS57;
+				DEVELOPMENT_TEAM = 4EZKBC5GZE;
 				INFOPLIST_FILE = "MARJ: Path To Happiness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.620263.MARJ--Path-To-Happiness1";
@@ -336,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63N3REBS57;
+				DEVELOPMENT_TEAM = 4EZKBC5GZE;
 				INFOPLIST_FILE = "MARJ: Path To Happiness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.620263.MARJ--Path-To-Happiness1";

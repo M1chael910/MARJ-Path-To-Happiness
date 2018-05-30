@@ -7,39 +7,34 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MainMoodTableViewController: UITableViewController {
-    var player: AVAudioPlayer = AVAudioPlayer()
+    
     var moods: [Mood] = []
     override func viewDidAppear(_ animated: Bool) {
-        print("View Did Appear")
         tableView.reloadData()
     }
     
-    func PlayMusic() {
-        do
-        {
-            let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-        }
-        catch
-            
-        {
-            //ERROR
-        }
-        self.player.play()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //        PlayMusic()
         saveData()
         self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        if let object = UserDefaults.standard.data(forKey: "myMoods") {
+            if let objectDecoded = try? JSONDecoder().decode([Mood], from: object) {
+                retrievedContact = objectDecoded
+            }
+        } else {
+            print("Decoding Failed")
+        }
+
+        
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-    moods.append(NewMood)
+        moods.append(NewMood)
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
@@ -119,8 +114,8 @@ class MainMoodTableViewController: UITableViewController {
      self.moods.remove(at: indexPath.row)
      self.tableView.deleteRows(at: [indexPath], with: .fade)
      self.tableView.reloadData()
-    
 }
+        
     }
     
     
