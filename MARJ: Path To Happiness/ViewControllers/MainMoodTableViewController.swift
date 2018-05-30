@@ -21,13 +21,14 @@ class MainMoodTableViewController: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = editButtonItem
         
-//        if let object = UserDefaults.standard.data(forKey: "myMoods") {
-//            if let objectDecoded = try? JSONDecoder().decode([Mood], from: object) {
-//                retrievedContact = objectDecoded
-//            }
-//        } else {
-//            print("Decoding Failed")
-//        }
+        if let object = UserDefaults.standard.data(forKey: "myMoods") {
+            if let objectDecoded = try? JSONDecoder().decode([Mood].self, from: object) {
+                moods = objectDecoded
+                print("moods decoded!!!!")
+            }
+        } else {
+            print("Decoding Failed")
+        }
 
         
     }
