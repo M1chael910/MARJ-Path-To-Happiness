@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdN-wa-koU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3954" y="-867"/>
+            <point key="canvasLocation" x="4084" y="-882"/>
         </scene>
         <!--Title-->
         <scene sceneID="dYL-tx-ikz">
@@ -280,6 +280,32 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-M1-lxR">
+                                        <rect key="frame" x="36" y="8" width="346" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxY-Zt-0J2">
+                                                <rect key="frame" x="0.0" y="0.0" width="123" height="51"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="Positive">
+                                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="positiveMoodButton:" destination="9kI-Sj-WMv" eventType="touchUpInside" id="ihM-pO-JSn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9X-r5-gWT">
+                                                <rect key="frame" x="223" y="0.0" width="123" height="51"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="Negative">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="negativeMoodButton:" destination="9kI-Sj-WMv" eventType="touchUpInside" id="sGQ-Ae-rnb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="9kI-Sj-WMv" id="4r8-ng-9IA"/>
@@ -336,7 +362,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5u-k7-B7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uax-fI-UXH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="62.518740629685162"/>
+            <point key="canvasLocation" x="4842.0289855072469" y="61.956521739130437"/>
         </scene>
         <!--Positive Mood Table View-->
         <scene sceneID="7Tl-Je-FCH">
@@ -460,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-3H-ClV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3136.2318840579715" y="573.91304347826087"/>
+            <point key="canvasLocation" x="3123" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pfn-X1-OFq">
@@ -478,7 +504,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGS-pd-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228.985507246377" y="573.91304347826087"/>
+            <point key="canvasLocation" x="2194" y="62"/>
         </scene>
     </scenes>
     <resources>
