@@ -18,7 +18,25 @@ class MainMoodTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        if let object = UserDefaults.standard.data(forKey: "myMoods") {
+            if let objectDecoded = try? JSONDecoder().decode([Mood].self, from: object) {
+                for item in objectDecoded {
+                    moods.append(item)
+                    tableView.reloadData()
+                }
+                
+                
+               
+                print("moods decoded!!!!")
+            }
+        } else {
+            print("Decoding Failed")
+        }
+
+        
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {

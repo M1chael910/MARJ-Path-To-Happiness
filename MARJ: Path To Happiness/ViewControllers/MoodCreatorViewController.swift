@@ -58,6 +58,18 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    @IBAction func whenSaveButtonPressed(_ sender: UIBarButtonItem) {
+        print("Here")
+        
+        print("save button pressed")
+        if let encoded = try? JSONEncoder().encode(myMoods){
+            UserDefaults.standard.set(encoded, forKey: "myMoods")
+            print("Saved Data!!!")
+        } else {
+            print("Encoding Failed")
+        }
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         if let text = moodDescriptionTextView.text {
             myCurrentMood.description = text
@@ -67,16 +79,13 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    
+    
+    
     @IBAction func CancelBtnPressed(_ sender: UIBarButtonItem) {
 
-        
     }
-    
-    
-    
-    
-    
-    
+  
     @IBAction func positiveMoodButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "positiveSegue", sender: self)
     }
