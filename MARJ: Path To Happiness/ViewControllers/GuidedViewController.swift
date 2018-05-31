@@ -12,28 +12,29 @@ import AVFoundation
 
 class GuidedViewController: UIViewController {
     var player: AVAudioPlayer = AVAudioPlayer()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        }
-   @IBAction func Right(_ sender: UIButton) {
-    
-    do
-    {
-        let audioPath = Bundle.main.path(forResource: "gymn", ofType: "mp3")
-        try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-    }
-    catch
+       
         
-    {
-        //ERROR
     }
-    player.play()
-    
-    
-    
-    
+    @IBAction func Right(_ sender: UIButton) {
+        
+        
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "gymn", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+            
+        {
+            //ERROR
+        }
+        player.play()
+        
+        
+        
     }
     @IBAction func Mid(_ sender: UIButton) {
         
@@ -48,9 +49,9 @@ class GuidedViewController: UIViewController {
             //ERROR
         }
         player.play()
-        
     }
     @IBAction func left(_ sender: UIButton) {
+        
         do
         {
             let audioPath = Bundle.main.path(forResource: "noct", ofType: "mp3")
@@ -61,12 +62,6 @@ class GuidedViewController: UIViewController {
         {
             //ERROR
         }
-        
-     player.play()
-    }
-    
-    
-    
-    
-}
-
+        player.play()
+            }
+        }

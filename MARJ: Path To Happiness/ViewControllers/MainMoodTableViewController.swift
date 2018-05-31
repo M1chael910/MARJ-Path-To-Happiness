@@ -10,6 +10,7 @@ import UIKit
 
 class MainMoodTableViewController: UITableViewController {
     
+    
     var moods: [Mood] = []
     
     override func viewDidAppear(_ animated: Bool) {
@@ -138,14 +139,20 @@ class MainMoodTableViewController: UITableViewController {
         if segue.identifier == "mainToCreator" {
             let newView = segue.destination as! MoodCreatorViewController
             newView.myMoods = moods
-        } else {
+        }else if
+             segue.identifier == "SelectionPage" {
+            _ = segue.destination as! GuidedViewController
+            
+
+        
+    } else {
             let NVC = segue.destination as! SelectedLogViewController
             let currentRow = tableView.indexPathForSelectedRow?.row
             NVC.SelectedMood = moods[currentRow!]
         }
      }
-}
 
+}
 
 
 
