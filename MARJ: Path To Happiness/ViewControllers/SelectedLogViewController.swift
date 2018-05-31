@@ -9,12 +9,8 @@
 import UIKit
 
 class SelectedLogViewController: UIViewController {
-
     @IBOutlet weak var myLabel: UILabel!
-    
     @IBOutlet weak var descriptionTextView: UITextView!
-    
-    
     var SelectedMood: Mood!
     
     override func viewDidLoad() {
@@ -24,15 +20,4 @@ class SelectedLogViewController: UIViewController {
         navigationItem.title = "\(dateFormatter.string(from: SelectedMood.date))"
         descriptionTextView.text = SelectedMood.description
     }
-    
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-
-    
 }

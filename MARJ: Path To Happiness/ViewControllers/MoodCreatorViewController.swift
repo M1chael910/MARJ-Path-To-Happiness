@@ -20,7 +20,7 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         myCurrentMood = myMoods.first
         scrollView.isScrollEnabled = true
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
@@ -59,15 +59,13 @@ class MoodCreatorViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func whenSaveButtonPressed(_ sender: UIBarButtonItem) {
-        print("Here")
-        
-        print("save button pressed")
-        if let encoded = try? JSONEncoder().encode(myMoods){
-            UserDefaults.standard.set(encoded, forKey: "myMoods")
-            print("Saved Data!!!")
-        } else {
-            print("Encoding Failed")
-        }
+            print("IBAction reached")
+            if let encoded = try? JSONEncoder().encode(myMoods){
+                UserDefaults.standard.set(encoded, forKey: "myMoods")
+                print("data encoded")
+            } else {
+                print("Encoding Failed")
+            }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

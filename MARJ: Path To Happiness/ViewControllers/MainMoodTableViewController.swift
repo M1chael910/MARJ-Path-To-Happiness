@@ -11,37 +11,27 @@ import UIKit
 class MainMoodTableViewController: UITableViewController {
     
     var moods: [Mood] = []
-    override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        self.navigationItem.leftBarButtonItem = editButtonItem
-        
+    override func viewDidAppear(_ animated: Bool) {
         if let object = UserDefaults.standard.data(forKey: "myMoods") {
             if let objectDecoded = try? JSONDecoder().decode([Mood].self, from: object) {
-                for item in objectDecoded {
-                    moods.append(item)
-                    tableView.reloadData()
-                }
-                
-                
-               
+                moods = objectDecoded
                 print("moods decoded!!!!")
             }
         } else {
             print("Decoding Failed")
         }
-
-        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.reloadData()
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
     let NewMood = Mood(description: "", date: Date(timeIntervalSinceNow: TimeInterval(exactly: 1)!))
-        moods.append(NewMood)
+    moods.append(NewMood)
     self.performSegue(withIdentifier: "mainToCreator", sender: self)
     }
     
@@ -113,7 +103,13 @@ class MainMoodTableViewController: UITableViewController {
         return true
     }
     
-    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+    }
     
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -134,9 +134,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdN-wa-koU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4084" y="-882"/>
+            <point key="canvasLocation" x="4465" y="-861"/>
         </scene>
-        <!--Title-->
+        <!--Log your current mood!-->
         <scene sceneID="dYL-tx-ikz">
             <objects>
                 <viewController id="9kI-Sj-WMv" customClass="MoodCreatorViewController" customModule="MARJ__Path_To_Happiness" customModuleProvider="target" sceneMemberID="viewController">
@@ -321,17 +321,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ePJ-BT-zrh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="LCF-1U-Xbw">
+                    <navigationItem key="navigationItem" title="Log your current mood!" id="LCF-1U-Xbw">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SBd-zP-010">
                             <connections>
                                 <action selector="CancelBtnPressed:" destination="9kI-Sj-WMv" id="5qg-93-5Bf"/>
                                 <segue destination="uax-fI-UXH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="9Lv-sA-p5X"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fHw-MA-0Oy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QDu-8Y-tc5">
                             <connections>
-                                <action selector="whenSaveButtonPressed:" destination="9kI-Sj-WMv" id="AHt-ju-v8x"/>
-                                <segue destination="uax-fI-UXH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="1go-5M-bHq"/>
+                                <action selector="whenSaveButtonPressed:" destination="9kI-Sj-WMv" id="Q3C-Lr-6aH"/>
+                                <segue destination="uax-fI-UXH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="5hb-Ed-qPk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -507,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-3H-ClV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3123" y="62"/>
+            <point key="canvasLocation" x="3471" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pfn-X1-OFq">
@@ -525,7 +525,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGS-pd-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="62"/>
+            <point key="canvasLocation" x="2855" y="62"/>
         </scene>
     </scenes>
     <resources>
