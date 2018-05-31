@@ -86,7 +86,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="g81-7H-lTN">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Done" id="3ns-st-J70"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cI5-UI-muV">
+                            <rect key="frame" x="155" y="7" width="104" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Song Selection"/>
+                            <connections>
+                                <segue destination="3dS-xI-lwf" kind="show" identifier="SelectionPage" id="dUf-Na-C5v"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Lu-0V-6TP">
                             <connections>
                                 <action selector="addBtnPressed:" destination="dsH-5z-CuV" id="laE-hp-Y1n"/>
@@ -145,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxresdefault" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-Qp-FEA">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-JK-NoZ">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
@@ -429,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="71139361_1641416e7b" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-T6-j01">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-Rm-67t">
                                 <rect key="frame" x="54" y="227" width="0.0" height="0.0"/>
@@ -534,6 +543,7 @@
         <image name="maxresdefault" width="1280" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dUf-Na-C5v"/>
         <segue reference="DFG-BB-bEJ"/>
     </inferredMetricsTieBreakers>
 </document>
