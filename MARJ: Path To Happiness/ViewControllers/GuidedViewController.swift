@@ -11,13 +11,20 @@ import AVFoundation
 
 
 class GuidedViewController: UIViewController {
+    
     var player: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
     }
+    
+    
+    @IBAction func NoMusicBtn(_ sender: UIButton) {
+        if player.isPlaying == true {
+            player.pause()
+        }
+    }
+    
     @IBAction func Right(_ sender: UIButton) {
         
         
@@ -37,7 +44,6 @@ class GuidedViewController: UIViewController {
         
     }
     @IBAction func Mid(_ sender: UIButton) {
-        
         do
         {
             let audioPath = Bundle.main.path(forResource: "canon", ofType: "mp3")
@@ -65,3 +71,9 @@ class GuidedViewController: UIViewController {
         player.play()
             }
         }
+
+
+
+
+
+

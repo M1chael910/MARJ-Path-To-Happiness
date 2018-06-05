@@ -142,13 +142,11 @@ class MainMoodTableViewController: UITableViewController {
         }else if
              segue.identifier == "SelectionPage" {
             _ = segue.destination as! GuidedViewController
-            
-
-        
     } else {
-            let NVC = segue.destination as! SelectedLogViewController
-            let currentRow = tableView.indexPathForSelectedRow?.row
-            NVC.SelectedMood = moods[currentRow!]
+                let NVC = segue.destination as! SelectedLogViewController
+                let currentRow = tableView.indexPathForSelectedRow?.row
+                NVC.SelectedMood = moods[currentRow!]
+            
         }
      }
 
